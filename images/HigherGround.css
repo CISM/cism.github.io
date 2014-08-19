@@ -7,6 +7,8 @@
    VERSION          :   1.2
    LAST MODIFIED    :   January 19, 2010
 
+   Modified by Matt Hoffman for use as CISM website, August 2014.
+
 -------------------------------------------------------- */
 
 /* -----------------------------------------------------
@@ -240,7 +242,7 @@ input.button {
 	padding: 0;	
 	color: #FFF;	
 }
-#header h1#logo-text a {
+#header-photo h1#logo-text a {
 	position: absolute;
 	margin: 0; padding: 0;
 	font: bold 36px 'Trebuchet MS', Arial, Sans-serif;
@@ -252,10 +254,10 @@ input.button {
 	/* change the values of top and left to adjust the position of the logo*/
 	top: 25px; left: 30px;	
 }
-#header h1#logo-text span {
+#header-photo h1#logo-text span {
 	color: #9A9696;
 }
-#header p#slogan {
+#header-photo p#slogan {
 	position: absolute;
 	margin: 0; padding: 0;
 	font: normal 12px 'Trebuchet MS', Arial, Sans-serif;
@@ -263,7 +265,7 @@ input.button {
 	color: #838181;
 	
 	/* change the values of top and left to adjust the position of the slogan*/
-	top: 67px; left: 95px;		
+	top: 97px; left: 95px;		
 }
 
 /* header links */
@@ -287,7 +289,10 @@ input.button {
 	height: 200px;
 	width: 790px;
 	margin: 0 auto;
-	background: #FFF url(header-photo.jpg) no-repeat center center;
+/*	background: #FFF url(header-photo.jpg) no-repeat center center;*/
+/*	background: #FFF url(../../images/berg.png) no-repeat center center;*/
+	background: #FFF url(tam790-200.png) no-repeat center center;
+  background-size: 790px 200px;
 }
 
 /* Navigation */
@@ -335,18 +340,20 @@ input.button {
 /* Main Column */
 #main {
 	float: left;
-	width: 67%;
+	width: 97%;
 	padding: 20px 0 0 0; margin: 0 0 0 10px;
 	display: inline;
 }
 #main h2 {
 	font: normal 1.9em 'Trebuchet MS', Tahoma, Sans-serif;
 	color: #85970C; 
+/*  color: #2f0bac;*/
 	text-transform: none;
 	padding: 10px 0 0px 10px; 			
 }
 #main h2 a {
 	color: #85970C;
+/*  color: #2f0bac;*/
 	text-decoration: none;	
 }
 #main ul li {
