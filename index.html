@@ -39,12 +39,95 @@
 		
 		<!-- MAIN CONTENT BEGINS -->	
 		<div id="main">
+		<!-- ================================================================ -->	
+		<!-- ================================================================ -->	
+		<!-- ================================================================ -->	
+
+<a name="Intro"></a>
+<h2> CISM Introduction </h2>
+
+<p>The Community Ice Sheet Model (CISM) is a next-generation ice sheet model used 
+for predicting ice sheet evolution and sea level rise in a changing climate. 
+This model is freely available to the glaciology and climate modeling communities.  
+It serves as the ice dynamics component of the 
+<a href="http://www2.cesm.ucar.edu/">Community Earth System Model (CESM)</a>, 
+which will be one of the first global climate models to include fully-coupled, dynamic ice sheets.
 
 
-			<h2> CONTENT HERE </h2>
-				<p> CISM goes here</p>
+<p>The starting point for CISM is the <a href="https://github.com/glimmer-cism">Glimmer ice sheet model</a> 
+developed at the University of Bristol and elsewhere. 
+CISM has been extended to include higher-order dynamical cores ("dycores") 
+developed by two U.S. Department of Energy projects, 
+<a href="http://www.csm.ornl.gov/ISICLES/">the Ice Sheet Initiative for Climate Extremes (ISICLES)</a> and 
+<a href="http://www.scidac.gov/PISCEES/">Predicting Ice Sheet and Climate Evolution at Extreme Scales (PISCEES)</a>. 
+The new dycores have contributed to two major sea-level assessments, 
+<a href="http://www.ice2sea.eu/">Ice2sea</a> and 
+<a href="http://websrv.cs.umt.edu/isis/index.php/SeaRISE_Assessment">SeaRISE</a>.
+
+<p>Development of CISM has been through the 
+<a href="http://www2.cesm.ucar.edu/working-groups/liwg">CESM Land Ice Working Group</a> 
+and led out of <a href="http://climate.lanl.gov/">Los Alamos National Laboratory</a>, 
+with contributions from other Department of Energy laboratories, 
+including Oak Ridge National Laboratory, Sandia National Laboratories, and Lawrence Berkeley National Laboratory, 
+as well as from universities including the National Center for Atmospheric Research, University of Montana, 
+University of Colorado, New York University, University of Bristol, University of Edinburgh,  Swansea University, and University of Zurich.
+
+<a name="Features"></a>
+<h2> CISM Features </h2>
+
+<p>The original Glimmer model calculated mass, momentum, and energy conservation 
+for ice sheets and glaciers using a serial, thermomechanically-coupled shallow-ice 
+representation of ice dynamics.  CISM extends the Glimmer model by adding 
+higher-order approximations of the momentum balance (velocity solver) and adding additional physics.  
+<p>
+CISM runs on a regular mesh using a mixture of Finite Difference and 
+Finite Element methods and is written in Fortran90.  CISM is open-source software 
+licensed under the GNU General Public License.
+<p>
+CISM can be run on Mac or Linux laptops or desktops using a single or multiple processors 
+or on supercomputing clusters with 10,000 processors or more.  
+It has successfully been run for the Greenland and Antarctic ice sheets 
+at up to at up to 1 km horizontal resolution.  
+CISM 2.0 is the first public release of the higher-order code.  
+The model can be referred to as either CISM or Glimmer-CISM.
+<p>
+CISM 2.0 includes the following new features relative to the Glimmer 1.x model:
+
+<ul>
+<li> Addition of robust, parallel, 3D, 1st-order accurate Stokes momentum
+balance ("Glissade") </li>
+<li> Addition of 3D, parallel mass and temperature transport (incremental
+remapping) </li>
+<li> An enthalpy-based formulation for solving the conservation of energy </li>
+<li> Addition of software hooks to modern C++ based solver libraries (e.g.,
+Trilinos) </li>
+<li> Replacement of Autotools build system with Cmake build system </li>
+<li> Addition of new test cases (mainly for the higher-order momentum
+balance model) </li>
+<li> Re-ordering of time step to be fully consistent with explicit forward
+Euler scheme (note that this changes transient SIA model answers
+slightly relative to previous versions of the model) </li>
+<li> Addition of a new high level "cism_driver", which replaces and
+reproduces functionality of several old drivers (e.g., simple_glide and
+glint_example) and allows for more flexible integration of additional
+and/or external dycores </li>
+<li> Re-arrangement of directory structure </li>
+<li> Modifications to Glint to support coupling to CESM and other climate
+models that compute the surface mass balance external to the ice sheet model </li>
+<li>  New and updated documentation </li>
+</ul>
 
 
+<p></p>
+
+			<p><img src="./images/GIS-velo.png" alt="CISM velocity output" class="float-left" />
+			Observation-based balance velocities for Greenland (left) and depth-averaged speed from higher-order CISM (right) with basal sliding coefficients optimized to match the balance velocities (after Price et al., PNAS, 108(22), 2011).
+			</p>
+
+
+		<!-- ================================================================ -->	
+		<!-- ================================================================ -->	
+		<!-- ================================================================ -->	
 		</div>
 		<!-- MAIN ENDS -->	
 	
