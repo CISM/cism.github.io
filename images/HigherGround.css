@@ -71,7 +71,7 @@ ul {
 
 /* images */
 img {
-	background: #FAFAFA;
+/*	background: #FAFAFA;*/
     border: 1px solid #DCDCDC;
 	padding: 8px;
 }
@@ -80,6 +80,11 @@ img.float-right {
 }
 img.float-left {
   	margin: 5px 10px 10px 0px;
+}
+
+img.logo {
+  	margin: 5px 5px 5px 5px;
+  vertical-align: middle;
 }
 
 code {
@@ -462,6 +467,10 @@ input.button {
 	width: 820px;
 	padding: 20px 0 15px 0;
 	text-align: center;
+}
+
+#footer-bottom p{
+	padding: 0px 0 0px 0;
 }
 
 /* postmeta */
