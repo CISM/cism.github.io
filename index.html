@@ -52,7 +52,7 @@ for predicting ice sheet evolution and sea level rise in a changing climate.
 This model is freely available to the glaciology and climate modeling communities.  
 It serves as the ice dynamics component of the 
 <a href="http://www2.cesm.ucar.edu/">Community Earth System Model (CESM)</a>, 
-which will be one of the first global climate models to include fully-coupled, dynamic ice sheets.
+which is one of the first global climate models to include coupled, dynamic ice sheets.
 
 
 <p>The starting point for CISM is the <a href="https://github.com/glimmer-cism">Glimmer ice sheet model</a> 
@@ -67,7 +67,7 @@ The new dycores have contributed to two major sea-level assessments,
 
 <p>Development of CISM has taken place through the 
 <a href="http://www2.cesm.ucar.edu/working-groups/liwg">CESM Land Ice Working Group</a> 
-and led by the <a href="http://climate.lanl.gov/">Climate, Ocean, Sea ice and land Ice (COSIM) project</a> out of the 
+and led by the <a href="http://climate.lanl.gov/">Climate, Ocean, Sea-ice and Ice-sheet Modeling (COSIM) project</a> of
 <a href="http://www.lanl.gov/index.php">Los Alamos National Laboratory</a>, 
 with contributions from other Department of Energy laboratories, 
 including Oak Ridge National Laboratory, Sandia National Laboratories, Lawrence Berkeley National Laboratory, and
@@ -81,20 +81,20 @@ Advanced Scientific Computing Research (<a href="http://science.energy.gov/ascr/
 <a name="Features"></a>
 <h2> CISM Features </h2>
 
-<p>The original Glimmer model calculated mass, momentum, and energy conservation 
+<p>The original Glimmer model calculates mass, momentum, and energy conservation 
 for ice sheets and glaciers using a serial, thermomechanically-coupled, shallow-ice 
 representation of ice dynamics.  CISM extends the Glimmer model by adding 
 higher-order approximations of the momentum balance (velocity solver), scalable parallelism,
-advanced third-party-solver library support, and adding additional physics.  
+advanced third-party-solver library support, and additional physics.
 <p>
-CISM runs on a regular mesh using a mixture of Finite Difference and 
-Finite Element methods and is written in Fortran90.  CISM is open-source software 
+CISM runs on a regular mesh using a mixture of finite-difference and 
+finite-element methods and is written in Fortran 90.  CISM is open-source software 
 licensed under the <a href="http://www.gnu.org/licenses/lgpl.html">GNU Lesser General Public License (LGPL)</a>.
 <p>
 CISM can be run on Mac or Linux laptops or desktops using a single or multiple processors 
-or on supercomputing clusters with access to 10's to 100's of thousands of processors.  
+or on supercomputing clusters with access to thousands of processor cores.  
 It has been successfully run for realistic Greenland and Antarctic ice sheet simulations,
-at horizonatal resolutions up to ~1 km, using several thousand processors. 
+at horizontal resolutions up to ~1 km, using several thousand processors. 
 CISM 2.0 is the first supported public release of the higher-order code.  
 The model can be referred to as either CISM or Glimmer-CISM.
 <p>
@@ -102,14 +102,14 @@ CISM 2.0 includes the following new features relative to the Glimmer 1.x model:
 
 <ul>
 <li> Addition of robust, parallel, 3D, 1st-order accurate approximation to the Stokes momentum
-balance ("Glissade") </li>
+balance  </li>
 <li> Addition of 3D, parallel mass and temperature transport </li>
-<li> Addition of software interfacesto modern C++ based solver libraries (e.g.,
-Trilinos) </li>
+<li> Addition of software interfaces to modern C++ based solver libraries (e.g.,
+<a href="http://trilinos.org/">Trilinos</a>) </li>
 <li> Replacement of Autotools build system with Cmake build system </li>
-<li> Addition of new test cases higher-order </li>
+<li> Addition of new higher-order test cases  </li>
 <li> Re-ordering of time step to be fully consistent with explicit forward Euler scheme </li>
-<li> Addition of a new high level "cism_driver", which replaces and reproduces functionality of several 
+<li> Addition of a new high-level "cism_driver", which replaces and reproduces functionality of several 
 old drivers and allows for more flexible integration of additional and/or external dycores </li>
 <li> Re-arrangement of directory structure </li>
 <li> Modifications to GLINT coupling software to support coupling to CESM and other climate
