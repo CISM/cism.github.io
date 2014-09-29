@@ -1,7 +1,7 @@
 This directory includes a bibtex file exported by Matt from his Mendeley library that includes CISM-related references.
 
 To update:
-1. update the cism_bib.bib file or have Matt update it.
+1. update the cism_bib.bib file or have Matt update it.  (Matt has a collection in his Mendeley library called "CISM refs".  He adds new citations to that, then selects-all, and exports them to overwrite the cism_bib.bib file in this directory.)
 
 2. regenerate the html using one of these methods:
 a) bibtex2html
