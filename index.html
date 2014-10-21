@@ -89,8 +89,8 @@ representation of ice dynamics.  CISM extends the Glimmer model by adding
 higher-order approximations of the momentum balance (velocity solver), scalable parallelism,
 advanced third-party-solver library support, and additional physics.
 <p>
-CISM runs on a regular mesh using a mixture of finite-difference and 
-finite-element methods and is written in Fortran 90.  CISM is open-source software 
+CISM runs on a regular mesh using a mixture of finite-difference, finite-volume, and
+finite-element methods and is written in Fortran 90.  CISM is open-source software
 licensed under the <a href="http://www.gnu.org/licenses/lgpl.html">GNU Lesser General Public License (LGPL)</a>.
 <p>
 CISM can be run on Mac or Linux laptops or desktops using a single or multiple processors 
@@ -98,18 +98,16 @@ or on supercomputing clusters with access to thousands of processor cores.
 It has been successfully run for realistic Greenland and Antarctic ice sheet simulations,
 at horizontal resolutions up to ~1 km, using several thousand processors. 
 CISM 2.0 is the first supported public release of the higher-order code.  
-The model can be referred to as either CISM or Glimmer-CISM.
 <p>
 CISM 2.0 includes the following new features relative to the Glimmer 1.x model:
 
 <ul>
-<li> Addition of robust, parallel, 3D, 1st-order accurate approximation to the Stokes momentum
-balance  </li>
+<li> Addition of robust, parallel, 2D and 3D, higher-order accurate approximations to the Stokes momentum balance (Blatter-Pattyn, L1L2, and SSA)  </li>
 <li> Addition of 3D, parallel mass and temperature transport </li>
 <li> Addition of software interfaces to modern C++ based solver libraries (e.g.,
 <a href="http://trilinos.org/">Trilinos</a>) </li>
 <li> Replacement of Autotools build system with Cmake build system </li>
-<li> Addition of new higher-order test cases  </li>
+<li> Addition of new test cases for higher-order models, including several with analytical solutions  </li>
 <li> Re-ordering of time step to be fully consistent with explicit forward Euler scheme </li>
 <li> Addition of a new high-level "cism_driver", which replaces and reproduces functionality of several 
 old drivers and allows for more flexible integration of additional and/or external dycores </li>
